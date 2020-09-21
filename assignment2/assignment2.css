@@ -1,4 +1,4 @@
-/* Body-Wrapper */
+/* Wrapper around the body tag */
 .body-wrapper div {
   display: flex;
   justify-content: center;
@@ -13,14 +13,11 @@
 
 /* Search Bar */
 input[type="text"] {
-  /* display: inline-block; */
   vertical-align: 350%;
   padding: 6px;
   border: none;
   border-radius: 4px;
   background-color: lightgray;
-  /* margin-top: 8px; */
-  /* margin-right: 16px; */
   font-size: 17px;
 }
 ::placeholder {
@@ -30,16 +27,14 @@ input[type="text"] {
 /* Navigation Bar Wrapper  */
 .navbar-div {
   background-color: maroon;
-  /* margin: 0 auto; */
   width: 101%;
   margin-left: -10;
 }
 
-/* Navigation Bar <ul> elements */
+/* Navigation Bar <ul> */
 /* Code based on Terry's from StackOveflow */
 /* https://stackoverflow.com/questions/23226888/horizontal-list-items-fit-to-100-with-even-spacing/23226961 */
 ul.navbar {
-  /* text-align: center; */
   display: flex;
   align-items: stretch;
   justify-content: center;
@@ -50,7 +45,7 @@ ul.navbar {
 
 /* Navigation Bar <li> elements */
 ul.navbar li {
-  display: inline;
+  display: inline-flex;
   color: white;
   padding: 15px 20px;
   font-family: sans-serif;
@@ -63,6 +58,6 @@ ul.navbar li {
 /* Main text */
 div > p {
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.75em;
   font-family: sans-serif;
 }
