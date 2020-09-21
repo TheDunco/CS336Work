@@ -20,11 +20,12 @@ input[type="text"] {
   background-color: lightgray;
   font-size: 17px;
 }
+
 ::placeholder {
   color: black;
 }
 
-/* Navigation Bar Wrapper  */
+/* Navigation Bar Wrapper */
 .navbar-div {
   background-color: maroon;
   width: 101%;
@@ -53,6 +54,10 @@ ul.navbar li {
   font-weight: 700;
   font-size: 1.7em;
   letter-spacing: -1px;
+}
+
+li:hover {
+  background-color: red;
 }
 
 /* Main text */
