@@ -1,23 +1,20 @@
-/* Wrapper */
-.wrapper {
-  display: inline-flexbox;
+/* Body-Wrapper */
+.body-wrapper div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 /* Calvin Logo */
 .calvin-logo {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
-  width: 17%;
+  width: 50%;
 }
 
 /* Search Bar */
 input[type="text"] {
-  display: inline;
-  position: fixed;
-  top: 75;
-  right: 100;
+  /* display: inline-block; */
+  vertical-align: 350%;
+
   padding: 6px;
   border: none;
   border-radius: 4px;
@@ -39,7 +36,7 @@ input[type="text"] {
 }
 
 /* Navigation Bar <ul> elements */
-/* Code based on Terry on StackOveflow */
+/* Code based on Terry's from StackOveflow */
 /* https://stackoverflow.com/questions/23226888/horizontal-list-items-fit-to-100-with-even-spacing/23226961 */
 ul.navbar {
   /* text-align: center; */
