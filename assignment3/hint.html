@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Hints? Secrets?</h2>
+    <p>
+      This is some text. In an actual application it would be the stardard info.
+    </p>
+    <p>
+      In this case, it's just rubbish, but have a hint.
+      <sub
+        ><button id="hint-button" onclick="openHint()">Show Hint</button>
+      </sub>
+    </p>
+
+    <script>
+      function openHint() {
+        //   When the button is set to open the hint and gets pressed,
+        // display hint and switch to the close hint state
+        document.getElementById("hint").innerHTML =
+          "This is the hint; I hope it was helpful";
+        document.getElementById("hint-button").innerHTML = "Close Hint";
+        document
+          .getElementById("hint-button")
+          .setAttribute("onclick", "closeHint()");
+      }
+      function closeHint() {
+        //   When the button is set to close the hint and gets pressed,
+        // hide hint and switch to the show hint state
+        document.getElementById("hint").innerHTML = "";
+        document.getElementById("hint-button").innerHTML = "Show Hint";
+        document
+          .getElementById("hint-button")
+          .setAttribute("onclick", "openHint()");
+      }
+    </script>
+
+    <p id="hint"></p>
+  </body>
+  <style>
+    #hint-button {
+      background: none !important;
+      border: none;
+      padding: 0 !important;
+      color: #069;
+      text-decoration: underline;
+      font-family: Arial, Helvetica, sans-serif;
+      cursor: pointer;
+      outline: none;
+    }
+    p {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: larger;
+    }
+    h2 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: xx-large;
+    }
+  </style>
+</html>
