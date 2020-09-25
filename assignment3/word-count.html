@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<htm>
+  <body>
+    <h1>Type words in the text area to see the stats</h1>
+    <textarea id="main-text-area" placeholder="Your Text Here"></textarea>
+    <!-- <script src="./word-count.js"></script> -->
+    <script>
+      var textarea = document.querySelector("textarea");
+      textarea.addEventListener("input", function () {
+        // Set the words display to the number of words
+        var wordCount =
+          document.getElementById("main-text-area").value.split(" ").length -
+          1 +
+          " Word" +
+          (wordCount = 1 ? "" : "s"); // This is ALMOST working but not quite
+        document.getElementById("words-display").innerHTML = wordCount;
+        // Set the characters display to the number of characters
+        var charCount =
+          document.getElementById("main-text-area").value.length +
+          " Characters";
+        document.getElementById("characters-display").innerHTML = charCount;
+      });
+    </script>
+    <h3 id="words-display">0 Words</h3>
+    <h3 id="characters-display">0 Characters</h3>
+  </body>
+</htm>
