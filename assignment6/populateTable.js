@@ -2,7 +2,8 @@ addDataRows = async () => {
     let ds = new DataService();
     // if (debug) { console.log(ds.fetchData())}
     //call the createRow() funciton for each element in the data
-    ds.fetchData().then((response) => {
+    try {
+        let response = await ds.fetchData()
         if (debug) {
             console.log('Response: ', JSON.stringify(response))
             console.log('fetched data')
@@ -14,7 +15,9 @@ addDataRows = async () => {
                 createRow(document.getElementById("rows"), element)
             })
         if (debug) { console.log('populated table') }
-    })
+    } catch (err) {
+        console.log('Error adding data rows: ', err)
+    }
 }
 
 // Thanks to Joelvh on this StackOverflow page for this function

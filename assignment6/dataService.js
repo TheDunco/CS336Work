@@ -38,10 +38,9 @@ class DataService {
                 } else {
                     // response is ok, resolve and set this.data to the fetched data
                     if (debug) { console.log('yes') }
-                    await response.json().then((data) => {
-                        if (debug) { console.log('This is the data: ', data) }
-                        this.data = data
-                    });
+                    let json = await response.json()   
+                    if (debug) { console.log('This is the data: ', json) }
+                    this.data = json
                     resolve(response)
                 };
             }
