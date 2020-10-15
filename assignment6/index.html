@@ -6,7 +6,7 @@
     <title>
         Some Mysterious People
     </title>
-    <!-- <link rel="stylesheet" href="style.css" type="text/css"> -->
+    <link rel="stylesheet" href="style.css" type="text/css">
     <script src="dataService.js"></script>
     <script src="populateTable.js"></script>
 </head>
@@ -40,13 +40,15 @@
       	(616) 555-3776
     	</td>
     	<td>
-      	<!-- <img src="https://i1.rgstatic.net/ii/profile.image/564299718709248-1511550945992_Q512/Victor_Norman2.jpg" /> -->
+      	<img id="normanImage" src="https://i1.rgstatic.net/ii/profile.image/564299718709248-1511550945992_Q512/Victor_Norman2.jpg" />
     	</td>
   	</tr>
         </tbody>
     </table>
 
-    <button onclick="addDataRows()">Fetch Data</button>
+    <div class="middle">
+        <a onclick="addDataRows()" class="btn btn4" onclick="addDataRows()">Fetch Data</a>
+    </div>
 </body>
 
 </html>

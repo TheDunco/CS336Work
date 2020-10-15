@@ -1,8 +1,9 @@
 // Psuedo dataservice class with built-in values
 try {
   const fetch = require('node-fetch');
-} catch {}
+} catch { }
 
+const debug = true;
 
 class DataService {
     
@@ -19,31 +20,33 @@ class DataService {
             : this.data.slice(0, numRecords))
     }
     
-    // TODO: Make this an async function.
     fetchData = async () => {
-        try {
-            console.log("fetching data")
-            let response = await fetch('https://randomuser.me/api/?results=10');
+        return new Promise( async (resolve, reject) => {
             
-            console.log('is response ok?')
+            // wait for and fetch the data
+            if (debug) { console.log("fetching data") }
+            let response = await fetch('https://randomuser.me/api/?results=10')
+            
+            // check if the response is ok
+            if (debug) { console.log('is response ok?') }
             if (!response.ok) {
-                console.log('no')
+                // response not ok, print error message and reject
+                if (debug) { console.log('no') }
                 console.log('Looks like there was a problem. Status Code: ' +
                     response.status);
-                return;
-            }
-            console.log('yes')
-            // Examine the text in the response
-            response.json().then((data) => {
-                // console.log(JSON.stringify(data, undefined, 2));
-                this.data = data
-            });
-            
-        }
-        catch (err) {
-            console.log('Fetch Error :-S', err);
-        };
-
+                reject(response)
+            } else {
+                // response is ok, resolve and set this.data to the fetched data
+                if (debug) { console.log('yes') }
+                // Examine the text in the response
+                await response.json().then((data) => {
+                    // console.log(JSON.stringify(data, undefined, 2));
+                    if (debug) { console.log('This is the data: ', data) }
+                    this.data = data
+                });
+                resolve(response)
+            };
+        })
     }
 }
  
