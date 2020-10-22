@@ -1,0 +1,82 @@
+* {
+  border: 0px solid red;
+}
+
+body * {
+  display: flex;
+}
+.card {
+  display: grid;
+  border-radius: 5px;
+  padding: 10px;
+  grid-column-gap: 10px;
+  grid-row-gap: 2px;
+  align-content: space-between;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+  box-shadow: 5px 5px 12px -5px rgba(0, 0, 0, 0.42);
+}
+
+.logo {
+  position: relative;
+  bottom: 0%;
+  border-radius: 5px;
+  height: 6vw;
+  width: 6vw;
+  box-shadow: 1px 1px 5px 1px;
+}
+
+.logo-div {
+  grid-column: 1;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+
+.title {
+  grid-column: 2;
+  grid-row: 1;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2vw;
+  font-weight: bold;
+}
+
+.subtitle {
+  grid-column: 2;
+  grid-row: 2;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.2vw;
+  color: gray;
+}
+
+/* Button made using https://www.bestcssbuttongenerator.com/#/4*/
+.button {
+  grid-column: 2;
+  grid-row: 3;
+  box-shadow: 1px 1px 6px 1px #3e7327;
+  background-color: #77b55a;
+  border-radius: 4px;
+  border: 1px solid #4b8f29;
+  min-height: min-content;
+  max-height: max-content;
+  height: 50%;
+  width: 100%;
+  float: center;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Verdana;
+  font-size: 0.7vw;
+  font-weight: bold;
+  padding: 0.5em;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #5b8a3c;
+}
+.button:hover {
+  background-color: #61a241;
+}
+.button:active {
+  position: relative;
+  top: 1px;
+}
