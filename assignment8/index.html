@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        Some Mysterious People
+    </title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="dataService.js"></script>
+    <script src="populateTable.js"></script>
+</head>
+
+<body>
+    <h1>What dorm were these people in?</h1>
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Address</th>
+            <th>Age</th>
+            <th>Ph #</th>
+            <th>Picture</th>
+        </thead>
+        <tbody id="rows">
+            <tr>
+    	<td>
+      	Vic Norman
+    	</td>
+    	<td>
+      	M
+    	</td>
+    	<td>
+      	1818 Very-very Wealthy Street
+    	</td>
+    	<td>
+      	54
+    	</td>
+    	<td>
+      	(616) 555-3776
+    	</td>
+    	<td>
+      	<img id="normanImage" src="https://i1.rgstatic.net/ii/profile.image/564299718709248-1511550945992_Q512/Victor_Norman2.jpg" />
+    	</td>
+  	</tr>
+        </tbody>
+    </table>
+
+    <div class="middle">
+        <a onclick="addDataRows()" class="btn btn4" onclick="addDataRows()">Fetch Data</a>
+    </div>
+</body>
+
+</html>
