@@ -12,12 +12,12 @@ export const addDataRows = async ():Promise<void> => {
             console.log('fetched data')
             console.log('getting data', ds.getData())
         }
-        let table: HTMLTableElement = document.getElementsByTagName('table')
+        let table: HTMLTableElement = document.querySelector('table')
         ds.getData()
             // I think some type (probably person) needs to include this...
             // .results
             .forEach((element: Person) => {
-                createRow(table, element)
+                createRow(table as HTMLTableElement, element)
             })
         if (debug) { console.log('populated table') }
     } catch (err) {
