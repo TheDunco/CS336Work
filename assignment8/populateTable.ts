@@ -14,7 +14,7 @@ export const addDataRows = async ():Promise<void> => {
         }
         let table: HTMLTableElement = document.querySelector('table')
         ds.getData()
-            // I think some type (probably person) needs to include this...
+            // I think some type (probably person) needs to include this .results
             // .results
             .forEach((element: Person) => {
                 createRow(table as HTMLTableElement, element)
