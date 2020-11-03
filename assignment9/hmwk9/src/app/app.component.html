@@ -1,0 +1,29 @@
+<div class="background">
+  <h1>Square Root Guessing Game</h1>
+  <div>
+    <label>Guess the sqrt of: </label>
+    <input type="text" [(ngModel)]="target" (input)="submitGuess(target)">
+    <label> within </label>
+    <input type="text" [(ngModel)]="accuracy" (keyup.enter)="submitPercent(accuracy)">
+    <label>%</label>
+  </div>
+
+  <div>
+    <button (click)="generateRandomNumber()">Generate Random Number</button>
+  </div>
+
+  <hr>
+
+  <div>
+    <label>Enter your guess:</label>
+    <input type="text" [(ngModel)]="userGuess" (keyup.enter)="processGuess(userGuess)">
+  </div>
+
+  <div *ngFor="let item of feedbackList">
+    {{item}}
+  </div>
+
+  <div>
+    <button *ngIf="correct" (click)="reset()">Reset</button>
+  </div>
+</div>

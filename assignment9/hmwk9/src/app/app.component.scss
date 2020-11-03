@@ -1,0 +1,71 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #2c3e50;
+}
+
+h1 {
+  font-weight: bolder;
+  font-size: 3vmax;
+  display: flex;
+  justify-content: center;
+}
+
+div div {
+  margin: 3px;
+  padding: 3px;
+  padding-bottom: 12px;
+  font-size: 2vmax;
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  font-size: 1.5vmax;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+// Button styles from https://1stwebdesigner.com/20-amazing-pure-css-animated-buttons/
+button {
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #e74c3c;
+  border-radius: 0.6em;
+  color: #e74c3c;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 20px;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+button {
+  -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  font-size: 1vmax;
+}
+
+button:hover,
+button:focus {
+  color: #2c3e50;
+  outline: 0;
+}
+
+button:hover {
+  box-shadow: 0 0 40px 40px #e74c3c inset;
+}
