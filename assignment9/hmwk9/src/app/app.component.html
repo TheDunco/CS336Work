@@ -14,7 +14,7 @@
 
   <hr>
 
-  <div>
+  <div *ngIf="!correct">
     <label>Enter your guess:</label>
     <input type="text" [(ngModel)]="userGuess" (keyup.enter)="processGuess(userGuess)">
   </div>
@@ -23,7 +23,10 @@
     {{item}}
   </div>
 
-  <div>
-    <button *ngIf="correct" (click)="reset()">Reset</button>
+  <div *ngIf="correct">
+    <lable>You guessed correctly with {{numGuesses}} guesses</lable> 
+  </div>
+  <div *ngIf="correct">
+    <button (click)="reset()">Reset</button>
   </div>
 </div>
