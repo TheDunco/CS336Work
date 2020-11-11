@@ -1,0 +1,23 @@
+<div class="wrapper">
+    
+    <app-survey-card 
+        question="On a scale of 0 to 100 how much of a lizard to you see yourself as?"
+        units="% lizard"
+        (result)="gotResult($event)">
+    </app-survey-card>
+
+    <app-survey-card 
+        question="On a scale of 1 to 10, bacon?" 
+        minVal="1" 
+        maxVal="20"
+        (result)="gotResult($event)">
+    </app-survey-card>
+
+    <app-survey-card 
+        question="How many boxes of Cheez-It's do you eat in a week?" 
+        maxVal="10"
+        units="boxes"
+        (result)="gotResult($event)">  
+    </app-survey-card>
+
+</div>

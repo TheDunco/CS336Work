@@ -1,0 +1,25 @@
+<mat-card>
+    <!-- Thanks to Nicolas Gehlert on 
+        https://stackoverflow.com/questions/47393790/angular-material-2-card-header-buttons-set-right
+        for helping me find the mat-card-title-group solution for this icon placement -->
+    <mat-card-title-group>
+        <mat-card-title>
+            {{question}}
+        </mat-card-title>
+        <mat-card-subtitle>
+            Choose your best answer from {{minVal}} to {{maxVal}} {{units}}
+        </mat-card-subtitle>
+        <mat-icon>question_answer</mat-icon>
+    </mat-card-title-group>
+    <mat-card-content>    
+        <mat-slider 
+            min="{{minVal}}" 
+            max="{{maxVal}}" 
+            step="1" 
+            value="1" 
+            thumbLabel
+            (change)="sliderChanged($event)">
+        </mat-slider>    
+    </mat-card-content>
+</mat-card>
+

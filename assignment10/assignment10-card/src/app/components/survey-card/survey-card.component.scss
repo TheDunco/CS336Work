@@ -1,0 +1,26 @@
+* {
+  border: 0px solid black;
+}
+
+mat-icon {
+  margin-left: 2px;
+}
+
+mat-card {
+  border: 2px solid rgba(0, 115, 168, 0.739);
+  min-width: 150px;
+  max-width: 12.5vw;
+  margin: 4px;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+mat-card-title-group {
+  padding: 1px;
+  margin: 1px;
+}
+
+mat-slider {
+  width: fill;
+}
