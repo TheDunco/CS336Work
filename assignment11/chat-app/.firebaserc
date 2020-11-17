@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "chat-app-duncan": {
+      "hosting": {
+        "chat-app": [
+          "chat-app-duncan"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+Project name: TBD
+Members: Duncan Van Keulen, Alex Johnson, Haram Koo
+
+Vision: 
+    To make a simple, clean, and user friendly online D&D character sheet. 
+My (Duncan's) initial vision for the project is to make the layout similar to the system I already
+use, at Ember's RPG Vault (https://embersrpgvault.com/characters). I like how customizable and flexible
+the system they have implemented is, but there are a few things I would want to tweak especially in terms
+of user interface (ie. make it material design) and in the form of a system that does health math
+for you (lets you say -10 health instea of clicking a button 10 times). A short/long rest button would also
+be very nice to implement. I am concerned that the database schema for this could potentially become rather cumbersome,
+as there is a lot of data to store per character, but I think it's managable. We may have to start by making it not 
+persistent and adding the database functionality afterwards, but maybe it would be better to start it fully from the start *shrug*.
+Either way, there is enough work to do to keep us occupied, but having a good reference to work from will help immensely, and a lot
+of what we do will be fairly similar, so I imagine that will allow for re-use of CSS and other code via components.

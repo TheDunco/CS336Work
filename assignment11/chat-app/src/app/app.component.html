@@ -1,0 +1,18 @@
+
+<header>
+    <h1>Chat App</h1>
+    <label>
+        Username: <input type="text" [(ngModel)]="username" (keyup.enter)="usernameEntered(username)">
+    </label>
+    <label>
+        Color: <input [(colorPicker)]="color" [style.background]="color"/>
+    </label>
+   
+</header>
+<hr>
+
+<div *ngFor="let msg of messages">
+    {{msg}}
+</div>
+
+<input type="text" [(ngModel)]="message" (keyup.enter)="messageEntered(message)">

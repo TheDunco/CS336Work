@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'assignment09-card';
   
-  gotResult(value): void {
+  gotResult(value: number): void {
     console.log(value)
   }
   

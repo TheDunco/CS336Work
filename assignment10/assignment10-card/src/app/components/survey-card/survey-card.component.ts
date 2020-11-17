@@ -21,7 +21,7 @@ export class SurveyCardComponent implements OnInit {
   }
   
   
-  sliderChanged(event): void {
+  sliderChanged(event: { value: Number; }): void {
     this.result.emit(event.value)
   }
 
