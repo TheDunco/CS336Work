@@ -1,18 +1,38 @@
+<div class="wrapper">
 
-<header>
-    <h1>Chat App</h1>
-    <label>
-        Username: <input type="text" [(ngModel)]="username" (keyup.enter)="usernameEntered(username)">
-    </label>
-    <label>
-        Color: <input [(colorPicker)]="color" [style.background]="color"/>
-    </label>
-   
-</header>
-<hr>
+    <header>
+        <h1><a class="discreteLink" href="https://github.com/TheDunco">Welcome To Dunco's Chat Room</a></h1>
+        <label>
+            Username: <input class="topInput" type="text" [(ngModel)]="username" (input)="usernameEntered(username)">
+            <br>
+            Color:    <input class="topInput" [(colorPicker)]="color" [style.background]="color" (cpSliderChange)="colorChosen(color)"/>
+            <br>
+            <button mat-button (click)="scrollToBottom()">Bottom of Page</button>
+        </label>
+        <hr>
+    </header>
 
-<div *ngFor="let msg of messages">
-    {{msg}}
+    <!-- Messages list -->
+    <div *ngFor="let msg of messages">
+        <mat-card [ngStyle]="{color: msg.color}">
+            <mat-card-title>
+                {{msg.message}}
+            </mat-card-title>
+            <mat-card-footer>
+            {{msg.username}} {{msg.timestamp.toDate() | date:"medium"}}
+            <button color="color" mat-icon-button (click)="deleteMessage(msg.docID)">
+                <mat-icon>delete</mat-icon>
+            </button>
+            </mat-card-footer>
+        </mat-card>
+    </div>
+
+    <span class="bottomSticky">
+        <input class="messageBox" type="text" [(ngModel)]="message" (keyup.enter)="messageEntered()" contenteditable>
+        <button class="sendButton" mat-icon-button (click)="messageEntered()">
+            <mat-icon color="primary" >send</mat-icon>
+        </button>
+    </span>
+
+    <a id="bottom"></a>
 </div>
-
-<input type="text" [(ngModel)]="message" (keyup.enter)="messageEntered(message)">

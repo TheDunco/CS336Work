@@ -1,0 +1,74 @@
+mat-card {
+  border: 1px solid rgba(216, 216, 216, 0.541);
+  min-width: 290px;
+  width: fit-content;
+  height: fit-content;
+  margin: 5px;
+  margin-top: 10px;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+mat-card-footer {
+  margin-left: auto;
+}
+
+.wrapper {
+  padding: 20px;
+  padding-left: 1vw;
+}
+
+.topInput {
+  min-width: 200px;
+  margin: 10px;
+  padding: 2px;
+  font-size: large;
+  border-radius: 7px;
+}
+.topInput:focus {
+  outline-width: 0;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.messageBox {
+  border-radius: 10px;
+  padding: 7px;
+  margin: 10px;
+  font-size: x-large;
+  min-width: 20vw;
+  padding-right: 40px;
+}
+
+.messageBox:focus {
+  outline-width: 0;
+}
+
+header {
+  position: sticky;
+  z-index: 10;
+  top: 0px;
+  padding: 10px;
+  background-color: white;
+}
+
+.bottomSticky {
+  position: sticky;
+  bottom: 20px;
+}
+
+.sendButton {
+  bottom: 4px;
+  right: 50px;
+}
+
+label {
+  font-size: x-large;
+}
+
+.discreteLink {
+  text-decoration: none;
+  color: black;
+}
